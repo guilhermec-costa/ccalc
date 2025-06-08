@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "headers/ops.h"
+#include "include/ops.h"
 
 void store_operand(struct OperandsOperatorsStorage* const ops_store, int operand) {
   ops_store->operands[ops_store->operand_count++] = operand;

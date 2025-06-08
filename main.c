@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "headers/ops.h"
+#include "include/ops.h"
 
 int main() { 
   const short MAX_EXPR_TOKENS = 1000;
