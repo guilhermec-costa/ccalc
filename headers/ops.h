@@ -5,6 +5,7 @@
 #define ASCII_0 48
 #define ASCII_9 57
 #define MAX_OPERAND_DIGITS 50
+#define INVALID_DIVISION -1
 
 struct OperandsOperatorsStorage {
   int operand_count;

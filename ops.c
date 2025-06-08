@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "headers/ops.h"
 
 void store_operand(struct OperandsOperatorsStorage* const ops_store, int operand) {
@@ -26,7 +27,13 @@ int make_op(int l, int r, char op) {
     case PLUS_OP: return l + r;
     case SUB_OP: return l - r;
     case MUL_OP: return l * r;
-    case DIV_OP: return l / r;
+    case DIV_OP: {
+      if(r == 0) {
+        printf("Error: Division by zero!\n");
+        exit(1);
+      }
+      return l / r;
+    }
   }
 }
 

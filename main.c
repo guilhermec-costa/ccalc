@@ -55,6 +55,8 @@ int main() {
     }
 
     const int result = evaluate_expr(ops_storage);
-    printf("Result: %d\n", result);
+    if(result) {
+      printf("Result: %d\n", result);
+    }
   }
 }
