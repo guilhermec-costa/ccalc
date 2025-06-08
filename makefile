@@ -12,7 +12,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 
-%.o: %.c
+build/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

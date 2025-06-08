@@ -1,17 +1,22 @@
-#include "ops.h"
+#include <stdio.h>
+#include "headers/ops.h"
 
-int add(int x, int y) {
-  return x + y;
+void store_operand(struct OperandsOperatorsStorage* const ops_store, int operand) {
+  ops_store->operands[ops_store->operand_count++] = operand;
 }
 
-int mult(int x, int y) {
-  return x * y;
+void store_operator(struct OperandsOperatorsStorage* const ops_store, int operator) {
+  ops_store->operators[ops_store->operator_count++] = operator;
 }
 
-int div(int x, int y) {
-  return x / y;
+void show_operands(struct OperandsOperatorsStorage* ops_store) {
+  for(int i=0; i<ops_store->operand_count;i++) {
+    printf("%d, ", ops_store->operands[i]);
+  }
 }
 
-int sub (int x, int y) {
-  return x - y;
+void show_operators(struct OperandsOperatorsStorage* ops_store) {
+  for(int i=0; i<ops_store->operator_count;i++) {
+    printf("%c, ", ops_store->operators[i]);
+  }
 }
